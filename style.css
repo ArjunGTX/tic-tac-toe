@@ -1,0 +1,38 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 20rem;
+  height: 20rem;
+  display: grid;
+  margin-bottom: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: bisque;
+  border: 1px solid black;
+}
+.cell {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cell::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cell.o::before {
+  content: "O";
+}
+.cell.x::before {
+  content: "X";
+}
